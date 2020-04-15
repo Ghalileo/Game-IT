@@ -1,15 +1,15 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/imageperformance", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/game-it", {
   useNewUrlParser: true
 });
 
 const userSeed = [
   {
-    name: "",
-    username: "",
-    password: "",
+    name: "max",
+    username: "madmax",
+    password: "furyroad",
     date: new Date(Date.now())
   }
 ];

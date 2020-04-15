@@ -4,10 +4,7 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
-<<<<<<< HEAD
-=======
     "axios": "^0.19.2",
->>>>>>> e4ca3bcdd4543d8f47be68924e8fa336bed95c08
     "react": "^16.13.1",
     "react-dom": "^16.6.3",
     "react-router-dom": "^5.1.2",
