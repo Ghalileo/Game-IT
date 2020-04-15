@@ -6,3 +6,10 @@ export default {
     return axios.post("/api/signup", userData);
   }
 };
+
+// export default {
+
+//   getThreads: function(threadData) {
+//     return axios.get("/api/search", threadData);
+//   }
+// };

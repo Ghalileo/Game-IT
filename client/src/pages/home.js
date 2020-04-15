@@ -1,6 +1,7 @@
 import React from "react"
 import { Col, Row, Container } from "../components/Grid";
 import HomeHero from "../components/HomeHero"
+import HomeExtra from "../components/HomeExtra"
 
 function Home() {
     return (
@@ -10,18 +11,22 @@ function Home() {
 
                 </Col>
                 <Col size="md-6">
-                    <h1>Hero</h1>
+
                     <HomeHero />
                 </Col>
                 <Col size="md-4">
                     <Row>
                         <Col size="md-12">
-                            <p>Thing One</p>
+                            <HomeExtra>
+                            <p>endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.</p>
+                            </HomeExtra>
                         </Col>
                     </Row>
                     <Row>
                         <Col size="md-12">
-                            <p>Thing Two</p>
+                            <HomeExtra>
+                                <p>endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.</p>
+                            </HomeExtra>
                         </Col>
                     </Row>
                 </Col>
