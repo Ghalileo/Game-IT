@@ -7,9 +7,7 @@ function Home() {
     return (
         <Container fluid>
             <Row>
-                <Col size="md-1">
-
-                </Col>
+                <Col size="md-1" />
                 <Col size="md-6">
 
                     <HomeHero />
