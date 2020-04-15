@@ -3,7 +3,7 @@ const signUpR = require("./signUp");
 const userR = require("./user");
 const threadR = require("./thread");
 
-router.use("/signup", signUpR)
+router.use("/signUp", signUpR)
 router.use("/user", userR)
 router.use("/forum", threadR)
 router.use("/search", threadR);
