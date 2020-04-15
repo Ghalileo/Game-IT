@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: azure;
+    background-color: blue;
     height: 56px;
 }
 
@@ -32,15 +32,26 @@
 }
 
 .navbar_navigation-items li {
-    padding: 0 0.5rem;
+    padding: 0.5rem;
+}
+
+.navbar__logo {
+    margin-left: 1rem;
 }
 
 .spacer {
-    display: flex 1;
+    flex: 1;
 }
 
 .navbar__logo a {
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .navbar_navigation-items {
+        display: none;
+    }
+
 }
