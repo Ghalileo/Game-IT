@@ -5,13 +5,14 @@ import Home from "./pages/home"
 import Search from "./pages/search"
 import SignUp from "./pages/signUp"
 import User from "./pages/user"
+import Nav from "./components/Nav"
 
 function App() {
 
   return (
     <Router>
       <div>
-        {/* <Nav /> */}
+        <Nav />
         <Switch>
           <Route exact path={"/"}>
             <Home />
