@@ -10,6 +10,10 @@ export default {
     return axios.get("/api/search");
   },
 
+  getThread: function(id) {
+    return axios.get("/api/search/" + id);
+  },
+
   addThread: function (ThreadData) {
     return axios.post("/api/search", ThreadData);
   },
