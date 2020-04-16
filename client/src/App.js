@@ -20,7 +20,7 @@ function App() {
           <Route exact path={"/search"}>
             <Search />
           </Route>
-          <Route exact path={"/signup"}>
+          <Route exact path={"/signUp"}>
             <SignUp />
           </Route>
           <Route exact path={"/user/:id"}>
