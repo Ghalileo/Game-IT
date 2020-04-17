@@ -16,12 +16,13 @@ function SignUp() {
     function handleInputChange(event) {
         const { name, value } = event.target;
         setUser({ ...user, [name]: value })
+        console.log(event.target)
     };
 
     function handleFormSubmit(event) {
         event.preventDefault();
     
-        if (user.name && user.username && user.password) {
+        if (user.name || user.username || user.password) {
             API.addUser({
                 name: user.name,
                 username: user.username,

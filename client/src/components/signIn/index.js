@@ -30,12 +30,12 @@ function SignIn() {
 
 function handleFormSubmit(event) {
     event.preventDefault();
-    if (newThread.topicName) {
+    if (signIn.username) {
         API.getSignIn({
             username: signIn.username,
             password: signIn.password
         })
-            .then(res => loadThreads())
+            .then(res => loadUser())
             .catch(err => console.log(err));
     }
 };
@@ -48,7 +48,7 @@ function handleFormSubmit(event) {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Sign In</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Input
@@ -68,9 +68,6 @@ function handleFormSubmit(event) {
         <Modal.Footer>
           <button variant="secondary" onClick={handleClose}>
             Close
-            </button>
-          <button variant="primary" onClick={handleClose}>
-            Save Changes
             </button>
         </Modal.Footer>
       </Modal>
