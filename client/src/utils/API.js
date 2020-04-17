@@ -6,6 +6,10 @@ export default {
     return axios.post("/api/signup", userData);
   },
 
+  getSignIn: function(SignInData) {
+    return axios.post("/api/signin/", SignInData);
+  },
+
   getThreads: function () {
     return axios.get("/api/search");
   },
