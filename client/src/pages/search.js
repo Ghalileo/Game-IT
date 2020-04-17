@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API from "../utils/API"
 import { Col, Row, Container } from "../components/Grid";
-import Jumbotron from "../components/Jumbotron"
 import { Input, FormBtn, TextArea } from "../components/Form";
 import HomeExtra from "../components/HomeExtra"
 
@@ -38,6 +37,7 @@ function Search() {
                 .catch(err => console.log(err));
         }
     };
+
     return (
         <Container fluid>
             <Row>
@@ -52,15 +52,20 @@ function Search() {
                         <TextArea
                             onChange={handleInputChange}
                             name="content"
-                            placeholder="Content (Optional)"
+                            placeholder="Content (required)"
                         />
+                        <FormBtn
+                            onClick={handleFormSubmit}
+                        >Submit</FormBtn>
                     </HomeExtra>
                 </Col>
             </Row>
             <Row>
                 <Col size="md-1" />
                 <Col size="md-10">
-
+                    <HomeExtra>
+                        
+                    </HomeExtra>
                 </Col>
             </Row>
         </Container>
