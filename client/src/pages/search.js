@@ -29,7 +29,7 @@ function Search() {
     function handleFormSubmit(event) {
         event.preventDefault();
         if (newThread.topicName) {
-            API.saveBook({
+            API.addThread({
                 topicName: newThread.topicName,
                 content: newThread.content
             })

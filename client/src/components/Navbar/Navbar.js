@@ -1,6 +1,7 @@
 import React from 'react';
 import './Navbar.css';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
+import SignIn from "../SignIn"
 
 const navbar = props => {
     return (
@@ -13,8 +14,9 @@ const navbar = props => {
                 <div className="spacer" />
                 <div className="navbar_navigation-items">
                     <ul>
-                        <li><a href="/signUp">Sign Up</a></li>
+                        <li><a href="/signup">Sign Up</a></li>
                         <li><a href="/user/:id">User</a></li>
+                        <li><SignIn /></li>
 
                     </ul>
                 </div>
