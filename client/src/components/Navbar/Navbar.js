@@ -10,7 +10,7 @@ const navbar = props => {
                 <div>
                     <DrawerToggleButton click={props.drawerClickHandler} />
                 </div>
-                <div className="navbar__logo"><a href="/">THE LOGO</a></div>
+                <div className="navbar__logo"><a href="/">Game It</a></div>
                 <div className="spacer" />
                 <div className="navbar_navigation-items">
                     <ul>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import Form, { Input, FormBtn } from "../Form"
+import { Input, FormBtn } from "../Form"
 import Modal from 'react-bootstrap/Modal'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./style.css"
@@ -14,8 +14,8 @@ function SignIn() {
     loadUser()
   }, [])
 
-  function loadUser(id) {
-    API.getSignIn(id)
+  function loadUser() {
+    API.getSignIn()
       .then(res => setSignIn(res.data))
       .catch(err => console.log(err))
   }

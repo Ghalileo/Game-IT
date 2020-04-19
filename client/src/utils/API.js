@@ -18,7 +18,7 @@ export default {
     return axios.get("/api/search/" + id);
   },
 
-  addThread: function (ThreadData) {
+  addNewThread: function (ThreadData) {
     return axios.post("/api/search", ThreadData);
   },
 };

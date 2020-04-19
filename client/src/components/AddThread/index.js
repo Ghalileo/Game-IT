@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react"
-import Form, { Input, FormBtn } from "../Form"
+import { Input, TextArea, FormBtn } from "../Form"
 import Modal from 'react-bootstrap/Modal'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./style.css"
 import API from "../../utils/API";
 
 
@@ -23,25 +22,25 @@ function AddThread() {
 
     function handleFormSubmit(event) {
         event.preventDefault();
-        if (signIn.username) {
-            API.getAddThread({
+        // if (addThread.topicName || addThread.content) {
+            API.addNewThread({
                 topicName: addThread.topicName,
                 content: addThread.content
             })
-                .then(res => loadUser())
+                .then(res => console.log(res))
                 .catch(err => console.log(err));
-        }
+        // }
     };
 
     return (
         <>
-            <a href="#" variant="primary" onClick={handleShow}>
-                Sign In
-        </a>
+            <button href="#" variant="primary" onClick={handleShow}>
+                New Thread
+        </button>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Sign In</Modal.Title>
+                    <Modal.Title>New Thread</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Input
@@ -56,7 +55,7 @@ function AddThread() {
                     />
                     <FormBtn
                         onClick={handleFormSubmit}
-                    >Sign in</FormBtn>
+                    >Submit</FormBtn>
                 </Modal.Body>
                 <Modal.Footer>
                     <button variant="secondary" onClick={handleClose}>
