@@ -5,16 +5,16 @@ function HomeHero() {
     return (
         <div className="wrap">
             <h2>Trending</h2>
-            <div className="wrap">
+            <div className="inwrap">
                 <p>works</p>
             </div>
-            <div className="wrap">
+            <div className="inwrap">
                 <p>works</p>
             </div>
-            <div className="wrap">
+            <div className="inwrap">
                 <p>works</p>
             </div>
-            <div className="wrap">
+            <div className="inwrap">
                 <p>works</p>
             </div>
         </div>

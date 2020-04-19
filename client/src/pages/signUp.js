@@ -16,7 +16,6 @@ function SignUp() {
     function handleInputChange(event) {
         const { name, value } = event.target;
         setUser({ ...user, [name]: value })
-        console.log(event.target)
     };
 
     function handleFormSubmit(event) {

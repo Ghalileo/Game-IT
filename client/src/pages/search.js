@@ -3,6 +3,7 @@ import API from "../utils/API"
 import { Col, Row, Container } from "../components/Grid";
 import { Input, FormBtn, TextArea } from "../components/Form";
 import HomeExtra from "../components/HomeExtra"
+import AddThread from "../components/AddThread"
 
 function Search() {
 
@@ -49,14 +50,10 @@ function Search() {
                             name="topicName"
                             placeholder="Name (required)"
                         />
-                        <TextArea
-                            onChange={handleInputChange}
-                            name="content"
-                            placeholder="Content (required)"
-                        />
                         <FormBtn
                             onClick={handleFormSubmit}
                         >Submit</FormBtn>
+                        <AddThread />
                     </HomeExtra>
                 </Col>
             </Row>
