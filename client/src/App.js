@@ -37,7 +37,6 @@ backdropClickHandler = () => {
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
         <main style={{marginTop: '64px'}}>
-        <p>this is the page content</p>
         </main>
         <Switch>
           <Route exact path={"/"}>
