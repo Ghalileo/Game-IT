@@ -15,10 +15,14 @@ export default {
   },
 
   getThread: function(id) {
-    return axios.get("/api/search/" + id);
+    return axios.get("/api/home/" + id);
   },
 
-  addNewThread: function (ThreadData) {
-    return axios.post("/api/search", ThreadData);
+  addNewThread: function (threadData) {
+    return axios.post("/api/search", threadData);
+  },
+
+  addNewComment: function (commentData) {
+    return axios.post("/api/forum", commentData);
   }
 };
