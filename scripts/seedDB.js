@@ -40,21 +40,25 @@ const threadSeed = [
     userId: 2,
     username: "rick",
     topicName: "How far will C9 make it this year",
+    content: "i dont think they will go to far",
     date: new Date(Date.now())
   }, {
     userId: 1,
     username: "madmax",
     topicName: "Thoughts on valorant anyone",
+    content: "i love the game personally",
     date: new Date(Date.now())
   }, {
     userId: 4,
     username: "queenbee",
     topicName: "anyone playing Last oasis",
+    content: "need people to play with",
     date: new Date(Date.now())
   }, {
     userId: 3,
     username: "rick",
     topicName: "what champ doing you think riot will showcase next",
+    content: "I hope its another jg id love to add them to my rotation",
     date: new Date(Date.now())
   }
 ];
@@ -89,6 +93,11 @@ const commentSeed = [
     userId: 4,
     threadId: 3,
     comment: "glad to been looking for people to play with sucks playing Last Oasis on your own to many large groups.",
+    date: new Date(Date.now())
+  }, {
+    userId: 1,
+    threadId: 5,
+    comment: "they need better top laners",
     date: new Date(Date.now())
   }
 ];

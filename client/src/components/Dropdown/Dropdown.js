@@ -5,8 +5,8 @@ import HomeExtra from "../HomeExtra"
 
 //dummy data -- delete after you sync to database
 const loggedInUser = {
-  userId: "2",
-  name: "Bob",
+  userId: "1",
+  username: "Madmax",
   password: "cats",
   date: Date.now(),
 };
@@ -14,66 +14,26 @@ const loggedInUser = {
 const comments = [
   {
     userId: "1",
-    threadId: "1",
-    comment: "this is cool",
+    threadId: "5",
+    comment: "they need better top laners",
     date: Date.now(),
-  },
-  {
-    userId: "1",
-    threadId: "3",
-    comment: "this is cats",
-    date: Date.now(),
-  },
-  {
-    userId: "2",
-    threadId: "3",
-    comment: "JS is cool",
-    date: Date.now(),
-  },
-  {
-    userId: "5",
-    threadId: "3",
-    comment: "python is cooler",
-    date: Date.now(),
-  },
+  }
 ];
 
 const threads = [
   {
-    userId: "2",
-    username: "bob",
-    topicName: "cats",
-    content: "cats are cool",
-    date: Date.now(),
-  },
-  {
-    userId: "3",
-    username: "bob",
-    topicName: "cats",
-    content: "cats are cool",
-    date: Date.now(),
-  },
-  {
-    userId: "2",
-    username: "bob",
-    topicName: "dogs",
-    content: "dogs are also cool",
-    date: Date.now(),
-  },
-  {
-    userId: "5",
-    username: "tennis_jasmine",
-    topicName: "tennis",
-    content: "tennis rackets cool",
-    date: Date.now(),
-  },
-  {
-    userId: "1",
-    username: "yahoo",
-    topicName: "internet",
-    content: "yahoo was  always cool",
-    date: Date.now(),
-  },
+    userId: 1,
+    username: "madmax",
+    topicName: "Madmax fury road",
+    content: "what everyones thoughts",
+    date: new Date(Date.now())
+  }, {
+    userId: 1,
+    username: "madmax",
+    topicName: "Thoughts on valorant anyone",
+    content: "i love the game personally",
+    date: new Date(Date.now())
+  }
 ];
 
 class Dropdown extends React.Component {
@@ -133,7 +93,7 @@ class Dropdown extends React.Component {
             threads.map((thread) => {
               return (
                 <div>
-                  <p>{thread.topicName}</p>
+                  <h5>{thread.topicName}</h5>
                   <p>{thread.content}</p>
                 </div>
               );

@@ -51,7 +51,7 @@ backdropClickHandler = () => {
           <Route exact path={"/user/:id"}>
             <User />
           </Route>
-          <Route exact path={"/forum/:id"}>
+          <Route exact path={"/search/:id"}>
             <Forum />
           </Route>
         </Switch>

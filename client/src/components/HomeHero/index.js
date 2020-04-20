@@ -29,7 +29,7 @@ function HomeHero({children}) {
               <List>
                 {thread.map(threads => (
                   <ListItem key={threads._id}>
-                    <Link to={"/forum/" + threads._id}>
+                    <Link to={"/search/" + threads._id}>
                       <strong>
                         {threads.topicName}  
                         
