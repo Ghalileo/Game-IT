@@ -10,6 +10,7 @@ function AddThread() {
     const [Thread, setThread] = useState([])
 
     useEffect(() => {
+        loadThreads()
     }, [])
 
     const handleClose = () => setShow(false);
@@ -20,9 +21,19 @@ function AddThread() {
         setThread({ ...Thread, [name]: value })
     };
 
+    function loadThreads() {
+        API.getThreads()
+            .then(res =>
+                setShow(res.data)
+                )
+                .catch(err => console.log(err));
+    }
+
+   
     function handleFormSubmit(event) {
+        
         event.preventDefault();
-        // if (addThread.topicName || addThread.content) {
+        if (addThread.topicName && addThread.content) {
             API.addNewThread({
                 topicName: Thread.topicName,
                 content: Thread.content,
@@ -31,7 +42,7 @@ function AddThread() {
             })
                 .then(res => console.log(res))
                 .catch(err => console.log(err));
-        // }
+        }
     };
 
     return (
@@ -56,6 +67,7 @@ function AddThread() {
                         placeholder="Content (required)"
                     />
                     <FormBtn
+                        disabled={!(addThread.topicName && addThread.content)}
                         onClick={handleFormSubmit}
                     >Submit</FormBtn>
                 </Modal.Body>
