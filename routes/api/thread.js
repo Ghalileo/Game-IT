@@ -4,11 +4,13 @@ const commentsController = require("../../controllers/commentsController");
 
 
 router.route("/")
-    .get(threadsController.findAll);
+    .get(threadsController.findAll)
+    .post(threadsController.create);
 
 router.route("/:id")
     .delete(threadsController.remove)
     .put(threadsController.update)
+    .post(threadsController.create)
     .get(commentsController.findById)
     .post(commentsController.create)
     .put(commentsController.update)

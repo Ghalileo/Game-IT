@@ -20,5 +20,5 @@ export default {
 
   addNewThread: function (ThreadData) {
     return axios.post("/api/search", ThreadData);
-  },
+  }
 };
