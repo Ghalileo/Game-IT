@@ -7,7 +7,7 @@ import API from "../../utils/API";
 
 function AddThread() {
     const [show, setShow] = useState(false);
-    const [Thread, setThread] = useState([])
+    const [addComment, setAddComment] = useState([])
 
     useEffect(() => {
     }, [])
@@ -17,17 +17,14 @@ function AddThread() {
 
     function handleInputChange(event) {
         const { name, value } = event.target;
-        setThread({ ...Thread, [name]: value })
+        setAddComment({ ...addComment, [name]: value })
     };
 
     function handleFormSubmit(event) {
         event.preventDefault();
         // if (addThread.topicName || addThread.content) {
-            API.addNewThread({
-                topicName: Thread.topicName,
-                content: Thread.content,
-                userId: 1,
-                username: "madmax"
+            API.addNewComment({
+                content: addComment.content
             })
                 .then(res => console.log(res))
                 .catch(err => console.log(err));
@@ -37,7 +34,7 @@ function AddThread() {
     return (
         <>
             <button href="#" variant="primary" onClick={handleShow}>
-                New Thread
+                New Comment
         </button>
 
             <Modal show={show} onHide={handleClose}>
@@ -45,11 +42,6 @@ function AddThread() {
                     <Modal.Title>New Thread</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Input
-                        onChange={handleInputChange}
-                        name="topicName"
-                        placeholder="Topic (required)"
-                    />
                     <TextArea
                         onChange={handleInputChange}
                         name="content"

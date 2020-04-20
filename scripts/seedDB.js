@@ -11,6 +11,8 @@ const userSeed = [
     username: "madmax",
     password: "furyroad",
     date: new Date(Date.now())
+  }, {
+    
   }
 ];
 
@@ -27,9 +29,9 @@ const threadSeed = [
 
 const commentSeed = [
   {
-    userId: { type: String, required: true },
-    threadId: { type: String, required: true },
-    comment: { type: String, required: true },
+    userId: 1,
+    threadId: 1,
+    comment: "the game sucks",
     date: new Date(Date.now())
 
   }

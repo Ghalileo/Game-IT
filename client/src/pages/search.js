@@ -22,22 +22,22 @@ function Search() {
             .catch(err => console.log(err));
     };
 
-    function handleInputChange(event) {
-        const { name, value } = event.target;
-        setNewThread({ ...newThread, [name]: value })
-    };
+    // function handleInputChange(event) {
+    //     const { name, value } = event.target;
+    //     setNewThread({ ...newThread, [name]: value })
+    // };
 
-    function handleFormSubmit(event) {
-        event.preventDefault();
-        if (newThread.topicName) {
-            API.addThread({
-                topicName: newThread.topicName,
-                content: newThread.content
-            })
-                .then(res => loadThreads())
-                .catch(err => console.log(err));
-        }
-    };
+    // function handleFormSubmit(event) {
+    //     event.preventDefault();
+    //     if (newThread.topicName) {
+    //         API.addThread({
+    //             topicName: newThread.topicName,
+    //             content: newThread.content
+    //         })
+    //             .then(res => loadThreads())
+    //             .catch(err => console.log(err));
+    //     }
+    // };
 
     return (
         <Container fluid>
@@ -46,12 +46,13 @@ function Search() {
                 <Col size="md-10">
                     <HomeExtra>
                         <Input
-                            onChange={handleInputChange}
+                            // onChange={handleInputChange}
                             name="topicName"
                             placeholder="Name (required)"
                         />
                         <FormBtn
-                            onClick={handleFormSubmit}
+                            // onClick={handleFormSubmit}
+                            
                         >Submit</FormBtn>
                         <AddThread />
                     </HomeExtra>
@@ -61,7 +62,7 @@ function Search() {
                 <Col size="md-1" />
                 <Col size="md-10">
                     <HomeExtra>
-                        
+                        {Threads}
                     </HomeExtra>
                 </Col>
             </Row>

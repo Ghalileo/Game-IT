@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Navbar from './components/Navbar/Navbar'
+import Navbar from './components/Navbar'
 import SideDrawer from './components/SideDrawer/SideDrawer'
 import Backdrop from './components/BackDrop/Backdrop'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";

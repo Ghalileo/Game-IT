@@ -1,5 +1,7 @@
 import React from "react";
 import "./Dropdown.css";
+import { Col, Row, Container } from "../Grid";
+import HomeExtra from "../HomeExtra"
 
 //dummy data -- delete after you sync to database
 const loggedInUser = {
@@ -152,31 +154,48 @@ class Dropdown extends React.Component {
     const { posts, favorites, threads } = this.state;
 
     return (
-      <div className="user-page-container">
-        <div className="card" style={{ width: "18rem" }}>
-          <div className="card-body">
-            <a onClick={this.handlePosts} href="#" className="btn btn-primary">
-              Posts
-            </a>
-            <a href="#" className="btn btn-primary">
-              Favorites
-            </a>
-            <a
-              href="#"
-              onClick={this.handleThreads}
-              className="btn btn-primary"
-            >
-              Threads
-            </a>
-            <a onClick={this.handleUser} href="#" className="btn btn-primary">
-              User
-            </a>
-          </div>
-        </div>
-        <div>
-          <p>{this.renderContent()}</p>
-        </div>
-      </div>
+
+      <Container fluid>
+        <Row>
+          <Col size="md-1" />
+          <Col size="md-3">
+          <HomeExtra>
+            <Row>
+              <Col size="md-12">
+                <a href="#" onClick={this.handlePosts} className="btn btn-primary">
+                  Posts
+                </a>
+              </Col>
+            </Row>
+            <Row>
+              <Col size="md-12">
+                <a href="#" onClick={this.handleThreads} className="btn btn-primary" >
+                  Threads
+                </a>
+              </Col>
+            </Row>
+            <Row>
+              <Col size="md-12">
+                <a onClick={this.handleUser} href="#" className="btn btn-primary">
+                  User
+                </a>
+              </Col>
+            </Row>
+          </HomeExtra>
+          </Col>
+          <Col size="md-1"/>
+
+          <Col size="md-6">
+          <HomeExtra>
+            <Row>
+              <Col size="md-12" >
+                <p>{this.renderContent()}</p>
+              </Col>
+            </Row>
+          </HomeExtra>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
