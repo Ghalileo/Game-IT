@@ -1,5 +1,6 @@
 import React from 'react';
-import './Forum.css'
+import "./style.css"
+import AddComment from "../AddComment"
 
   
   const threads = [
@@ -58,6 +59,7 @@ import './Forum.css'
         <div className="topics-container">
             <header className="topics-header">Halo</header>
             <p>stuff and things about stuff</p>
+            <AddComment />
             <div>
           {threads.length > 0 &&
             threads.map((thread) => {

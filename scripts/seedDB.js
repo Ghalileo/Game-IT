@@ -12,7 +12,20 @@ const userSeed = [
     password: "furyroad",
     date: new Date(Date.now())
   }, {
-    
+    name: "jake",
+    username: "rick",
+    password: "tickingclock",
+    date: new Date(Date.now())
+  }, {
+    name: "jackson",
+    username: "testtube",
+    password: "jacksonisgreat",
+    date: new Date(Date.now())
+  }, {
+    name: "emily",
+    username: "queenbee",
+    password: "sugercube",
+    date: new Date(Date.now())
   }
 ];
 
@@ -23,17 +36,60 @@ const threadSeed = [
     topicName: "Madmax fury road",
     content: "what everyones thoughts",
     date: new Date(Date.now())
-
+  }, {
+    userId: 2,
+    username: "rick",
+    topicName: "How far will C9 make it this year",
+    date: new Date(Date.now())
+  }, {
+    userId: 1,
+    username: "madmax",
+    topicName: "Thoughts on valorant anyone",
+    date: new Date(Date.now())
+  }, {
+    userId: 4,
+    username: "queenbee",
+    topicName: "anyone playing Last oasis",
+    date: new Date(Date.now())
+  }, {
+    userId: 3,
+    username: "rick",
+    topicName: "what champ doing you think riot will showcase next",
+    date: new Date(Date.now())
   }
 ];
 
 const commentSeed = [
   {
-    userId: 1,
+    userId: 2,
     threadId: 1,
-    comment: "the game sucks",
+    comment: "the game sucks.",
     date: new Date(Date.now())
-
+  }, {
+    userId: 4,
+    threadId: 1,
+    comment: "is it any good watched some game play on it seemed ok.",
+    date: new Date(Date.now())
+  }, {
+    userId: 2,
+    threadId: 1,
+    comment: "nah not worth your time queen.",
+    date: new Date(Date.now())
+  }, {
+    userId: 4,
+    threadId: 2,
+    comment: "I think they have a good shot of making it all the way this year.",
+    date: new Date(Date.now())
+  }, {
+    userId: 3,
+    threadId: 3,
+    comment: "Im currenttly playing it all day for the most part, hit me up if your looking to group.",
+    date: new Date(Date.now())
+  }, {
+    userId: 4,
+    threadId: 3,
+    comment: "glad to been looking for people to play with sucks playing Last Oasis on your own to many large groups.",
+    date: new Date(Date.now())
   }
 ];
 

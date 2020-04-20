@@ -36,7 +36,7 @@ function AddThread() {
 
     return (
         <>
-            <button href="#" variant="primary" onClick={handleShow}>
+            <button href="#" variant="primary" onClick={handleShow} className="btn btn-primary">
                 New Thread
         </button>
 
