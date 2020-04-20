@@ -1,0 +1,35 @@
+.list-overflow-container {
+  max-height: 545px;
+
+  overflow-x: hidden;
+  
+}
+
+.list-overflow-container ul {
+  margin: 0;
+}
+
+.list-overflow-container li {
+
+  border-bottom: black dotted;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+.list-overflow-container li * {
+  cursor: pointer;
+}
+
+.list-overflow-container li a {
+  color: #1E1A1F;
+}
+
+.list-overflow-container li:first-child {
+  border-top: none;
+}
+
+.list-overflow-container li:last-child {
+  border-bottom: none;
+}

@@ -1,6 +1,6 @@
 .side-drawer {
     height: 100%;
-    background: white;
+    background: #4A1809;
     box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
@@ -27,7 +27,7 @@
     margin: 0.5rem 0;
 }
 .side-drawer a {
-    color: blue;
+    color: white;
     text-decoration: none;
     font-size: 1.2rem;
 }

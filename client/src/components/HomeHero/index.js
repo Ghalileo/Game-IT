@@ -1,21 +1,46 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
+import { List, ListItem } from "../Items";
+import { Link } from "react-router-dom";
+import API from "../../utils/API";
 import "./style.css"
 
-function HomeHero() {
+function HomeHero({children}) {
+    
+    const [thread, setThread] = useState({})
+
+  useEffect(() => {
+    loadThreads()
+    
+  }, [])
+
+  function loadThreads() {
+    API.getThreads()
+      .then(res => 
+        setThread(res.data)
+      )
+      .catch(err => console.log(err));
+  };
+
     return (
         <div className="wrap">
-            <h2>Trending</h2>
+            {children}
             <div className="inwrap">
-                <p>works</p>
-            </div>
-            <div className="inwrap">
-                <p>works</p>
-            </div>
-            <div className="inwrap">
-                <p>works</p>
-            </div>
-            <div className="inwrap">
-                <p>works</p>
+            {thread.length ? (
+              <List>
+                {thread.map(threads => (
+                  <ListItem key={threads._id}>
+                    <Link to={"/forum/" + threads._id}>
+                      <strong>
+                        {threads.topicName}  
+                        
+                      </strong>
+                    </Link>
+                  </ListItem>
+                ))}
+              </List>
+            ) : (
+              <h3>No Results to Display</h3>
+            )}
             </div>
         </div>
     )

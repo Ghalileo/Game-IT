@@ -10,20 +10,23 @@ function Home() {
                 <Col size="md-1" />
                 <Col size="md-6">
 
-                    <HomeHero />
+                    <HomeHero>
+                        <h2>Trending</h2>
+                    </HomeHero>
                 </Col>
                 <Col size="md-4">
                     <Row>
                         <Col size="md-12">
                             <HomeExtra>
-                            <p>endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.</p>
+                                <h2>Up Coming Games</h2>
+                                <img link="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Cyberpunk_2077_box_art.jpg/220px-Cyberpunk_2077_box_art.jpg"/>
                             </HomeExtra>
                         </Col>
                     </Row>
                     <Row>
                         <Col size="md-12">
                             <HomeExtra>
-                                <p>endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.endless stuff and things to do stuff and things with.</p>
+                                <h2>Esports</h2>
                             </HomeExtra>
                         </Col>
                     </Row>
