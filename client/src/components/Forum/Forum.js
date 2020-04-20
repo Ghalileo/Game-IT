@@ -56,7 +56,8 @@ import './Forum.css'
   
       return (
         <div className="topics-container">
-            <header className="topics-header">Topics</header>
+            <header className="topics-header">Halo</header>
+            <p>stuff and things about stuff</p>
             <div>
           {threads.length > 0 &&
             threads.map((thread) => {

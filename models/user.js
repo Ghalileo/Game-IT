@@ -14,21 +14,16 @@ userSchema.plugin(passportLocalMongoose)
 
 const User = mongoose.model("User", userSchema);
 
-// User.prototype.validPassword = function (pass) {
-//   return bcrypt.compareSync(pass, this.password)
-// }
+// User.prototype.validPassword = function(pass) {
+//   return bcrypt.compareSync(pass, this.password);
+// };
 
-// User.addHook("beforeCreate", function (user) {
+// User.addHook("beforeCreate", function(user) {
 //   user.password = bcrypt.hashSync(
 //     user.password,
 //     bcrypt.genSaltSync(10),
 //     null
 //   );
 // });
-
-// User.associate = function (models) {
-//   User.hasMany(models.Art, { onDelete: "cascade" });
-//   User.hasMany(models.Comment, { onDelete: "cascade" });
-// };
 
 module.exports = User;
