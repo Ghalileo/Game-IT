@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
-import SignIn from "../signIn"
+import SignIn from "../SignIn"
 
 const navbar = props => {
     return (

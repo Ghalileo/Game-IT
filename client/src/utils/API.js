@@ -15,7 +15,7 @@ export default {
   },
 
   getThread: function(id) {
-    return axios.get("/api/home/" + id);
+    return axios.get("/api/search/" + id);
   },
 
   addNewThread: function (threadData) {

@@ -5,7 +5,7 @@ import { Col, Row, Container } from "../components/Grid";
 import API from "../utils/API";
 import HomeExtra from "../components/HomeExtra"
 
-function Forum() {
+function Forum(props) {
 
   const [thread, setThread] = useState({})
 
@@ -25,14 +25,29 @@ function Forum() {
             <Col size="md-1" />
             <Col size="md-10">
               <HomeExtra>
-              <h1>
-                {thread.topicName}
-              </h1>
+              <h1> Madmax fury road</h1>
+              <p>what everyones thoughts</p>
               </HomeExtra>
               <HomeExtra>
-              <h1>
-                {thread.content}
-              </h1>
+              <h5>
+                {/* {thread.content} */}
+                rick
+              </h5>
+              <p>the game sucks.</p>
+              </HomeExtra>
+              <HomeExtra>
+              <h5>
+                {/* {thread.content} */}
+                queenbee
+              </h5>
+              <p>is it any good watched some game play on it seemed ok.</p>
+              </HomeExtra>
+              <HomeExtra>
+              <h5>
+                {/* {thread.content} */}
+                rick
+              </h5>
+              <p>nah not worth your time queen.</p>
               </HomeExtra>
             </Col>
           </Row>

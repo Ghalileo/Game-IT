@@ -33,7 +33,7 @@ function AddThread() {
     function handleFormSubmit(event) {
         
         event.preventDefault();
-        if (addThread.topicName && addThread.content) {
+        if (Thread.topicName && Thread.content) {
             API.addNewThread({
                 topicName: Thread.topicName,
                 content: Thread.content,
@@ -67,7 +67,7 @@ function AddThread() {
                         placeholder="Content (required)"
                     />
                     <FormBtn
-                        disabled={!(addThread.topicName && addThread.content)}
+                        disabled={!(Thread.topicName && Thread.content)}
                         onClick={handleFormSubmit}
                     >Submit</FormBtn>
                 </Modal.Body>
